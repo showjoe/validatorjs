@@ -514,4 +514,13 @@ Validator.registerAsync = function(name, fn, message) {
   Lang._setRuleMessage(lang, name, message);
 };
 
+/**
+ * Add custom implicit rule names
+ *
+ * @param  {array}   names
+ */
+Validator.addImplicitRuleNames = function(names) {
+  Rules.addToImplicitArray(names);
+};
+
 module.exports = Validator;
