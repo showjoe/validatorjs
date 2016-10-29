@@ -411,6 +411,14 @@ var manager = {
   isImplicit: function(name) {
     return this.implicitRules.indexOf(name) > -1;
   },
+  /**
+   * Add custom rule names to the implicitRules array
+   *
+   * @param {array} names
+   */
+  addToImplicitArray: function(names) {
+    this.implicitRules = this.implicitRules.concat(names);
+  },
 
   /**
    * Register new rule
